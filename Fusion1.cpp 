@@ -1,0 +1,50 @@
+#include<map.h>
+
+Fusion::interpolate(VectorXd W, MatrixXd P,int dimension){
+int i;
+
+map<int,vector<int>> *p;
+
+map<int,vector<int>> selected_particles;
+
+*p=selected_particles;
+p=(map<int,vector<int>>)malloc(sizeof(map<int,vector<int>>));
+
+map<int,vector<int>>  interpolated_particles;
+double threshold=0.4;
+
+MatrixXd T;int k=0;
+vector<int> V;
+for(i=0;i<dimension;i++){
+	
+if(W(i)>threshold){
+V.at(P(i,0));
+V.at(P(i,1));
+V.at(P(i,2));
+selected_particles[k]=V;
+}
+}
+free(p);
+double x,y,theta,x2,y2,theta2;
+float *interval;
+vector<double> tempom1,tempon2;
+for(map<int,vector<int>>::iterator ii=selected_particles.begin();ii!=selected_particles.end();++ii)
+
+tempon1=(*ii)first;
+x=tempon2.at(0);
+y=tempon2.at(1);
+theta=tempon2.at(2);
+++ii;
+tempon2=(*ii)second;
+x2=tempon2.at(0);
+y2=tempon2.at(1);
+theta2=tempon.at(2);
+
+*interval=x+(x2-x)/2;
+interval++;
+*interval=y+(y2-y)/2;
+interval++;
+*interval=theta+(theta2-theta)/2;
+
+
+}

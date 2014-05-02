@@ -1,0 +1,121 @@
+#include<Utilitaires.cpp>
+
+
+struct distance{
+float x;
+float suivant;
+};
+
+
+
+class Fusion{
+	
+vector<int> tagx;
+vector<int> tagy;
+
+Fusion(){
+ 
+VectorXd xrl(25),yrl(25),thetarl(25);
+  int i;
+  int VecXr[26]=  {50,  65 , 70 , 75  ,90 ,105, 110, 115 ,120 ,13,0 ,145 ,150,  145 ,130 ,115 ,110 ,105 , 90 , 75 , 70 , 65 , 50 , 35,  25 , 30 };
+ int VecYr[26]=  {110, 115 ,130, 145, 150, 145 ,130 ,120, 110 ,110 ,105 , 90 ,  70,  65,  70  ,90 ,105 ,110 ,105 , 90 , 75 , 65 , 70 , 90, 105, 110};
+                float VecTheta[26]={0  ,pi/4 , pi/2 , pi/4 ,  0 ,-pi/4 ,-pi/2 ,-pi/4 ,  0  , 0 ,-pi/4 ,-pi/2 ,-135*pi/180 ,pi , 135*pi/180 ,pi/2 ,135*pi/180 ,pi ,225*pi/180 ,270*pi/180 ,225*pi/180 ,pi ,135*pi/180 , pi/2 , pi/4 ,  0};
+                numberOfSteps=ns;
+                for(i=0;i<26;i++){
+                xrl.push_back(VecXr[i]);
+                yrl.push_back(VecYr[i]);
+                thetarl.push_back(VecTheta[i]);
+
+
+}
+}
+Fusion(Fusion& a){}
+
+
+void init_RFID_tags(){	
+int i
+for(i=0,x=10,y=20;i<N,x<100,y<200;i++,x=+20,y+=40)
+{
+tagx.at(i)=x;
+tagy.at(i)=y;
+}
+
+}
+
+
+void fuse(VectorXd X){
+
+
+Utilities U;
+
+float *x_pass,*y_pass,*theta_pass;
+
+MatrixXd cloud;
+
+cloud=cloud_particles(X_predicted);
+
+VectorXd weights;
+
+weights=compute_weight(cloud_particles,tag);
+
+
+interpolate(){
+	
+
+
+	
+}
+
+
+Vision v;
+Mat M;
+Utilities(float *x_pass,float *y_pass,float *theta_pass)
+
+VectorXd noise(3);
+X(0)=X(0)+noise(0);
+X(1)=X(1)+noise(1);
+X(2)=X(2)+noise(2);
+v.BriscCompute();
+M=v.clustering();
+
+Matrixxd mat_features(100,3);
+VectorXd V;
+int i,j;
+for(i=0;i<100;i++)
+for(j=0;j<6;j++){
+V=M.at(i);
+mat_features(i,j)=V(j);
+}
+struct distance *d;
+d=observation(X);
+
+
+}
+
+
+
+struct distance* observation(VectorXd X){
+
+
+int i,j;
+struct distance *d;
+for(i=0;i<Numberoffeatures;i++)
+	for(j=0;j<6;j++){
+	*d->x=*d->x +(X(0)-mat_features(i,j));
+	d->x=d->x->suivant;	
+}
+
+return d;
+}
+	
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,65 @@
+
+
+
+#include <eigen3/Eigen/Dense>
+
+VectorXd gauss_newton_minimization(VectorXd);
+
+
+VectorXd *f(VectoXd X);
+
+
+int main(){
+
+const int a=9.14;
+VectorXd X(3),Y(3);
+X(0)=20.0;
+X(1)=2.1;
+X(2)=a;
+
+Y=gauss_newton_minimization(X);
+return 0;
+}
+
+
+VectorXd gauss_newton_minimization(VectorXd &estimated_robot_position){
+
+float delta=2.0;
+MatrixXd J(3,3);
+
+J(0,0)=cos(delta);
+J(0,1)=0;
+J(0,2)=sin(delta);
+J(1,0)=-0;
+J(1,1)=1;
+J(1,2)=0;
+J(2,0)=-sin(delta);
+J(2,1)=0;
+J(2,2)=cos(delta);
+
+VectorXd yi(3);
+yi(0)=11;
+yi(1)=22;
+yi(3)=11;
+
+J1=(J.transpose())*J;
+J=J1.inverse()*J.transpose();
+r=yi-f(estimated_robot_position,predicted_feature_position);
+predicted_feature_position=predicted_feature_position- J*r;
+}
+
+
+VectorXd *f(VectoXd X){
+VectorXd *Y;
+
+Y=(VectoXd*)malloc(sizeof(VectoXd));
+
+*Y=(X-p)*cos(delta)-(Z-q)*sin(delta);
+*(Y+1)=Y;
+*(Y+2)=(X-p)*sin(delta)+(Z-q)*cos(delta);
+
+return  Y;
+}
+
+
+

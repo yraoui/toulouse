@@ -1,0 +1,39 @@
+#include<iostream>
+#include <fstream>
+#include <sstream>
+
+
+const int ROWS=6;
+const int COLS=5;
+const int BUFFSIZE=80;
+
+int main(){
+int array[ROWS][COLS];
+char buff[BUFFSIZE];
+ifstream ifs("brisc_db.txt");
+stringstream ss;
+
+for(int row=0;row<ROWS;row++)
+ifs.getline(buff,BUFFSIZE);
+ss<<buff;
+
+
+for(int col=0;col<COLS;++col){
+ss.getline(buff,6,',');
+array[row][col]=atoi(buff);
+
+}
+
+ss<<"";
+ss.clear()
+}
+
+
+for(int row=0;row<ROWS;row++)
+for(int col=0;col<COLS;col++)
+cout<<array[row][col]<<"  ";
+
+}
+ifs.close();
+}
+

@@ -1,0 +1,4 @@
+
+
+in=imread('greens.jpg');
+

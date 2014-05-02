@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/younes/Desktop/bigDir/open/test1.cpp
+vector
+-
+iostream
+-
+utility
+-
+pcl/visualization/pcl_plotter.h
+-
+

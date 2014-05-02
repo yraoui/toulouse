@@ -1,0 +1,33 @@
+#include <iostream.h>
+#include <string.h>
+#include  "sterio_interpretation.cpp"
+void test(){
+  SterioTests st;
+  vector<IplImage*>  image_Database;
+  MatrixXd L(10,10);
+  image_Database=L.load_image_db();
+
+  map<int,*string> *robot;
+  map<int,*int> *sensor;
+  map<int,*O> *observation;
+  map<int,*L> *landmark
+
+  robot[0]="pioneer";
+  robot[1]="ax11";
+  robot[2]="hrp2";
+  robot[3]="rackam_rouge";
+  sensor[0]=10;
+  sensor[1]=20;
+  sensor[2]=30;
+  sensor[3]=40;
+  L()
+
+
+
+
+
+
+
+
+
+}
